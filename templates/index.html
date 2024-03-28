@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Список пользователей</title>
+</head>
+<body>
+<h1>Список пользователей</h1>
+<table border="1px">
+    <tr>
+        <th>user_id</th>
+        <th>name</th>
+        <th>email</th>
+        <th>password</th>
+    </tr>
+    {% for user in users %}
+    <tr>
+        <td>{{ user.user_id }}</td>
+        <td>{{ user.name }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.password }}</td>
+    </tr>
+    {% endfor %}
+</table>
+<br>
+<button> Добавить пользователя</button>
+</body>
+</html>
